@@ -139,8 +139,13 @@ q::after {
     display: flex;
 }
 
-.btn:hover{
+/* .btn:hover{
 
+} */
+
+.hover-shadow-white:hover{
+    filter: drop-shadow(0 0 5px #fff);
+    transition: filter 0.3s;
 }
 
 .input, .input-light{
@@ -347,8 +352,8 @@ q::after {
     box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
     transition: transform 0.2s;
 }
-  
-  .floating-whatsapp:hover {
+
+.floating-whatsapp:hover {
     transform: scale(1.1);
 }
 
