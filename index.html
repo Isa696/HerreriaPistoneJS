@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Herrería Pistone</title>
+    <meta name="description" content="" />
+
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Herrería Pistone" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/PaulleDemon" />
+    <!--Replace with the current website url-->
+    <meta property="og:image" content="" />
+
+    <link
+      rel="shortcut icon"
+      href="./assets/logo-nav.jpg"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+    />
+
+    <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css"> -->
+    <link rel="stylesheet" href="./css/tailwind-build.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+      integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body class="tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-bg-[#ffffff]">
+    <header
+      class="tw-fixed tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-px-[10%] max-lg:tw-mr-auto lg:tw-justify-around"
+    >
+      <div
+        class="tw-absolute tw-left-0 tw-top-0 tw-z-[-1] tw-h-0 tw-w-full tw-bg-white tw-shadow-md"
+        id="expanding-header-bg"
+      >
+        <!-- expands the white background as scroll -->
+      </div>
+
+      <div class="tw-flex tw-w-max tw-place-items-center tw-gap-3">
+        <!-- <img src="./assets/public accountant.jpg"
+                alt="Stroemer logo" class="tw-w-full tw-h-full tw-object"> -->
+        <div class="tw-h-[60px] tw-w-[80px] tw-p-[4px]">
+          <img
+            id="header-logo"
+            src="./assets/logo.png"
+            alt="logo"
+            class="tw-object tw-h-full tw-w-full"
+          />
+        </div>
+      </div>
+      <div class="collapsible-header animated-collapse" id="collapsed-items">
+        <div
+          class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-white max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+        >
+          <a class="header-links" href="#about-us"> Nosotros </a>
+          <a class="header-links" href="#projects"> Proyectos </a>
+          <a class="header-links" href="#booking"> Contacto </a>
+          <a class="header-links" href="#location"> Ubicacíon </a>
+        </div>
+        <div
+          class="tw-flex tw-place-items-center tw-gap-[20px] tw-text-xl max-lg:tw-w-full max-lg:tw-place-content-center max-lg:!tw-text-white"
+        >
+          <a
+            href="https://www.instagram.com/herreria_pistone/"
+            target="_blank"
+            rel="no-referrer"
+            area-label="instagram"
+            class="header-links tw-transition-colors tw-duration-[0.3s]"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a
+            href="mailto:herreriapistone@gmail.com"
+            target="_blank"
+            rel="no-referrer"
+            area-label="email"
+            class="header-links tw-transition-colors tw-duration-[0.3s]"
+          >
+            <i class="bi bi-envelope-paper-fill"></i>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            rel="no-referrer"
+            area-label="whatsapp"
+            class="header-links whatsapp-link tw-transition-colors tw-duration-[0.3s]"
+          >
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <button
+        class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl lg:tw-hidden"
+        onclick="toggleHeader()"
+        aria-label="menu"
+        id="collapse-btn"
+      >
+        <!-- <i class="bi bi-list"></i> -->
+      </button>
+    </header>
+
+    <section
+      class="tw-relative tw-flex tw-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-h-[100dvh]"
+      id="hero-section"
+    >
+      <img
+        src="./assets/images/homepage/hero-image.jpg"
+        alt=""
+        class="tw-h-full tw-w-full tw-scale-[1.3] tw-object-cover"
+        id="hero-image"
+      />
+      <div
+        class="overlay-gradient tw-absolute tw-top-0 tw-h-full tw-w-full max-lg:tw-z-[2] max-lg:!tw-bg-[#1c1c1ca2]"
+      ></div>
+
+      <!-- <div class="tw-absolute tw-bottom-0 
+                    tw-right-[10%] max-lg:tw-z-0
+                    tw-h-[750px]
+                    tw-max-w-[450px]
+                    max-md:tw-hidden
+                    ">
+            <img src="./assets/images/homepage/lawyer.png" 
+                alt="law" 
+                class="tw-object-cover tw-h-full tw-w-full
+                        ">
+        </div> -->
+
+      <div
+        class="tw-absolute tw-left-[15%] tw-top-[50%] tw-z-[5] tw-flex tw-min-w-[320px] tw-max-w-[500px] tw-translate-y-[-50%] tw-flex-col tw-gap-4 tw-p-2 tw-text-white max-md:tw-left-[50%] max-md:tw-translate-x-[-50%] max-md:tw-place-content-center max-md:tw-place-items-center"
+      >
+        <h1
+          class="khula-font tw-text-xl tw-font-semibold max-md:tw-text-center max-md:tw-text-base"
+        >
+          Herreria en general
+        </h1>
+
+        <h2
+          class="khula-font tw-text-6xl tw-font-bold tw-uppercase max-md:tw-text-4xl"
+        >
+          Herrería Pistone
+          <!-- <br class="max-md:tw-hidden">     -->
+        </h2>
+        <span
+          class="tw-mt-2 tw-w-full tw-text-justify tw-text-lg max-md:tw-text-base"
+        >
+          Más de 3 generaciones <br />
+          de experiencia en el rubro <br />
+          Asesoramiento personalizado <br />
+          Trabajos con Garantía
+        </span>
+        <div
+          class="tw-mt-3 tw-flex tw-w-full tw-gap-[2%] max-md:tw-flex-col max-md:tw-gap-4"
+        >
+          <!-- <a
+                        href=""
+                        target="_blank"
+                        rel="noreferrer"
+                        class="tw-flex tw-max-h-[50px] tw-min-w-[180px] tw-place-content-center tw-place-items-center tw-gap-2 tw-bg-white tw-p-3 tw-px-[20px] tw-text-black tw-transition-colors tw-duration-[0.3s] hover:tw-bg-[#100f0f] hover:tw-text-[#fff] max-md:tw-min-w-[100px]"
+                    >
+                        <span>Ver video</span>
+                        <i class="bi bi-camera-video-fill"></i>
+                    </a> -->
+
+          <a
+            href="#booking"
+            class="tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-gap-2 tw-bg-[#000] tw-p-3 tw-text-[#fff] tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-1"
+          >
+            <span>Contactanos</span>
+            <i class="bi bi-telephone-fill"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="tw-flex tw-min-h-[60vh] tw-w-full tw-place-content-center tw-place-items-center tw-gap-[10%] tw-bg-[#fff] tw-p-4 tw-px-[20%] max-lg:tw-flex-col max-lg:tw-gap-[4%] max-lg:tw-px-[5%]"
+    >
+      <div
+        class="tw-flex tw-h-[350px] tw-w-[500px] tw-overflow-hidden tw-rounded-md max-md:tw-mt-[5%] max-md:tw-h-[300px] max-md:tw-w-[300px]"
+      >
+        <img
+          src="./assets/images/homepage/top-view.jpg"
+          alt=""
+          class="tw-w-full tw-object-cover"
+        />
+      </div>
+      <div
+      id="about-us"
+        class="tw-flex tw-h-full tw-flex-col tw-gap-[5%] max-lg:tw-mt-4 max-lg:tw-gap-[3%] max-lg:tw-text-center"
+      >
+        <h2
+          class="primary-text-color tw-text-5xl tw-font-medium tw-uppercase max-md:tw-text-3xl"
+        >
+          Sobre nosotros
+        </h2>
+        <div class="tw-mt-6 tw-max-w-[450px] tw-text-justify">
+            Herrería Pistone, una empresa familiar con más de tres
+            generaciones de experiencia en el ámbito de la herrería y la construcción de estructuras metálicas.
+            A lo largo de nuestra trayectoria, hemos tenido el privilegio de participar en proyectos de gran
+            escala, que abarcan desde la remodelación integral de viviendas hasta la construcción de
+            estructuras metálicas para edificios y obras industriales.
+        </div>
+      </div>
+    </section>
+
+    <section class="tw-px-[20%] max-lg:tw-px-[5%] tw-p-8 tw-bg-gray-100">
+      <div>
+
+        <h2
+        class="primary-text-color tw-text-3xl tw-p-4 tw-text-center"
+        >Porque elegirnos?</h2>
+      </div>
+      <div class="tw-max-w-7xl tw-mx-auto">
+    
+        <!-- Bloque: Presupuesto -->
+        <div class="cotization-container tw-flex max-md:tw-flex-col tw-items-center max-md:tw-text-center tw-gap-[10%] tw-p-4">
+          
+          <!-- Icono decorado -->
+          <div class="tw-flex tw-items-center tw-justify-center tw-place-content-center tw-w-1/2 max-md:tw-w-full">
+            <div class="tw-bg-[#000] tw-rounded-full tw-p-8 tw-flex tw-items-center">
+              <i class="bi bi-file-earmark-text tw-text-white tw-justify-center tw-text-5xl max-md:tw-text-3xl "></i>
+            </div>
+          </div>
+    
+          <!-- Texto -->
+          <div class="tw-w-1/2 max-md:tw-w-full tw-px-4">
+            <p class="tw-text-gray-800 tw-text-2xl max-md:tw-text-xl tw-leading-relaxed tw-space-y-4">
+              Ofrecemos presupuestos gratuitos que reflejan la claridad, transparencia y el enfoque detallado que ponemos en cada trabajo.
+            </p>
+          </div>
+        </div>
+    
+        <!-- Bloque: Logística -->
+        <div class="logistics-container max-md:tw-text-center tw-gap-[10%] tw-p-4 max-md:tw-gap-[15%]">
+          
+          <!-- Texto -->
+          <div class="tw-w-1/2 max-md:tw-w-full tw-px-4">
+            <p class="tw-text-gray-800 tw-text-2xl max-md:tw-text-xl tw-leading-relaxed tw-space-y-4">
+              Contamos con movilidad y cobertura en todo el país. Nuestra sede en el Parque Industrial Tigre, sobre la calle Austria Norte N°1359, nos conecta con la innovación y facilita la logística para proyectos de distintas escalas.
+            </p>
+          </div>
+          
+          <!-- Icono decorado -->
+          <div class="tw-flex tw-items-center tw-justify-center tw-place-content-center tw-w-1/2 max-md:tw-w-full">
+            <div class="tw-bg-[#000] tw-rounded-full tw-p-8 tw-flex tw-items-center tw-justify-center">
+              <i class="bi bi-truck tw-text-white tw-text-5xl max-md:tw-text-3xl"></i>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+    
+
+    <section
+    id="projects"
+      class="tw-flex tw-min-h-[60vh] tw-w-full tw-flex-col tw-place-items-center tw-gap-[10%] tw-bg-[#000] tw-p-8 tw-px-[20%] max-md:tw-h-max max-md:tw-min-h-[unset] max-md:tw-gap-[4%] max-md:tw-px-[5%]"
+    >
+      <h2 class="tw-text-4xl tw-font-semibold tw-text-white max-md:tw-text-2xl">
+        Nuestros trabajos
+      </h2>
+      <!-- <h2 class="tw-text-5xl max-md:tw-text-3xl primary-text-color tw-text-center"></h2> -->
+
+<!--       <div
+        class="tw-mt-[5%] tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-justify-around tw-gap-[10%] max-lg:tw-mt-4 max-lg:tw-flex-col max-lg:tw-gap-5 max-md:tw-mt-8"
+      >
+        <div
+          class="tw-flex tw-w-full tw-flex-wrap tw-justify-around tw-gap-3 tw-rounded-sm tw-border-2 tw-border-solid tw-border-[#cccbcba0] tw-p-2"
+        >
+          <input
+            type="text"
+            class="input-light"
+            placeholder="City, area or street name"
+            id=""
+          />
+
+          <div class="tw-flex tw-w-[200px] tw-flex-col tw-gap-1">
+            <div class="dropdown input-light" id="dropdown1">
+              <button class="dropdown-toggle tw-flex tw-gap-5">
+                <span>Home type</span>
+                <i class="bi bi-chevron-down tw-ml-auto"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>House</li>
+                <li>Condo</li>
+                <li>Townhome</li>
+                <li>Apartment</li>
+                <li>Commercial</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tw-flex tw-w-[200px] tw-flex-col tw-gap-1">
+            <div class="dropdown input-light" id="dropdown2">
+              <button class="dropdown-toggle tw-flex tw-gap-5">
+                <span>Bedrooms</span>
+                <i class="bi bi-chevron-down tw-ml-auto"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>Any</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4+</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tw-flex tw-w-[200px] tw-flex-col tw-gap-1">
+            <div class="dropdown input-light" id="dropdown3">
+              <button class="dropdown-toggle tw-flex tw-gap-5">
+                <span>Bathrooms</span>
+                <i class="bi bi-chevron-down tw-ml-auto"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>Any</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4+</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tw-flex tw-w-[200px] tw-flex-col tw-gap-1">
+            <div class="dropdown input-light" id="dropdown4">
+              <button class="dropdown-toggle tw-flex tw-gap-5">
+                <span>Min price</span>
+                <i class="bi bi-chevron-down tw-ml-auto"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li>Any</li>
+                <li>$50,000</li>
+                <li>$100,000</li>
+                <li>$200,000</li>
+                <li>$200,000</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <div
+        class="tw-mt-[5%] tw-flex tw-w-full tw-flex-wrap tw-place-content-center tw-place-items-center tw-justify-around tw-gap-8 max-lg:tw-mt-4 max-lg:tw-flex-col max-lg:tw-gap-5 max-md:tw-mt-8"
+      >
+        <a
+          class="tw-flex tw-h-[350px] tw-w-[350px] tw-cursor-pointer tw-flex-col tw-place-items-center tw-gap-4 tw-overflow-hidden tw-bg-[#fff] tw-text-black tw-shadow-lg"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.instagram.com/p/DEn8KgAvLw5/?img_index=1"
+        >
+          <div class="tw-relative tw-h-[280px] tw-w-full tw-bg-white">
+            <img
+              src="./assets/images/homepage/property.jpg"
+              alt=""
+              class="tw-h-full tw-w-full tw-object-cover"
+            />
+
+            <div class="tw-flex tw-flex-col tw-gap-1 tw-p-4 tw-text-center">
+              <h3 class="tw-text-lg tw-font-semibold">Pérgola con vidrio laminado</h3>
+              <h4 class="tw-text-sm tw-text-[#595858]">Obra barbarita</h4>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="tw-flex tw-h-[350px] tw-w-[350px] tw-cursor-pointer tw-flex-col tw-place-items-center tw-gap-4 tw-overflow-hidden tw-bg-[#fff] tw-text-black tw-shadow-lg"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.instagram.com/p/CQzp8VULJga/?img_index=1"
+        >
+          <div class="tw-relative tw-h-[280px] tw-w-full tw-bg-white">
+            <img
+              src="./assets/images/homepage/apartment.jpg"
+              alt=""
+              class="tw-h-full tw-w-full tw-object-cover"
+            />
+
+            <div class="tw-flex tw-flex-col tw-gap-1 tw-p-4 tw-text-center">
+              <h3 class="tw-text-lg tw-font-semibold">Jardín vertical</h3>
+              <h4 class="tw-text-sm tw-text-[#595858]">Junto a Taman paisajismo</h4>
+            </div>
+          </div>
+        </a>
+
+        <a
+          class="tw-flex tw-h-[350px] tw-w-[350px] tw-cursor-pointer tw-flex-col tw-place-items-center tw-gap-4 tw-overflow-hidden tw-bg-[#fff] tw-text-black tw-shadow-lg"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.instagram.com/stories/highlights/18028555097198960/"
+        >
+          <div class="tw-relative tw-h-[280px] tw-w-full tw-bg-white">
+            <img
+              src="./assets/images/homepage/house.jpg"
+              alt=""
+              class="tw-h-full tw-w-full tw-object-cover"
+            />
+
+            <div class="tw-flex tw-flex-col tw-gap-1 tw-p-4 tw-text-center">
+              <h3 class="tw-text-lg tw-font-semibold">Oficinas Belfast</h3>
+              <h4 class="tw-text-sm tw-text-[#595858]">Obra Nordelta</h4>
+            </div>
+          </div>
+        </a>
+        <a
+          class="tw-flex tw-h-[350px] tw-w-[350px] tw-cursor-pointer tw-flex-col tw-place-items-center tw-gap-4 tw-overflow-hidden tw-bg-[#fff] tw-text-black tw-shadow-lg"
+          target="_blank"
+          rel="noreferrer"
+          href="https://www.instagram.com/p/DBkKqbBPc99/"
+        >
+          <div class="tw-relative tw-h-[280px] tw-w-full tw-bg-white">
+            <img
+              src="./assets/images/homepage/sb5.jpg"
+              alt=""
+              class="tw-h-full tw-w-full tw-object-cover"
+            />
+
+            <div class="tw-flex tw-flex-col tw-gap-1 tw-p-4 tw-text-center">
+              <h3 class="tw-text-lg tw-font-semibold">Obra SB5</h3>
+              <h4 class="tw-text-sm tw-text-[#595858]">Junto a Belfast</h4>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <a
+        href="https://www.instagram.com/herreria_pistone/"
+        target="_blank"
+        rel="noreferrer"
+        class="tw-mt-[5%] tw-flex tw-gap-2 tw-bg-[#fff] tw-p-3 tw-px-[20px] tw-text-[#181a18fd] tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-1 max-md:tw-p-2"
+      >
+        <span>Ver mas</span>
+        <i class="bi bi-arrow-right"></i>
+      </a>
+    </section>
+
+    <section
+      class="tw-flex tw-w-full tw-place-content-center tw-place-items-center tw-gap-[10%] tw-overflow-hidden tw-bg-[#EFEFEF] tw-p-4 max-md:tw-flex-col max-md:tw-px-2 lg:tw-px-[10%]"
+      id="booking"
+    >
+      <div
+        class="tw-flex tw-h-[350px] tw-w-[350px] tw-overflow-hidden max-md:tw-hidden"
+      >
+        <img
+          src="./assets/images/homepage/contact-image.jpg"
+          alt=""
+          class="tw-w-full tw-object-cover"
+        />
+      </div>
+      <div class="tw-mt-[5%] tw-flex tw-h-full tw-flex-col tw-gap-[5%]">
+        <div class="mxa-md:tw-text-center tw-flex tw-flex-col tw-gap-2">
+          <h2 class="tw-text-3xl tw-font-medium max-md:tw-text-xl">
+            Asesoramiento gratuito
+          </h2>
+          <h2
+            class="primary-text-color tw-text-5xl tw-font-medium max-md:tw-text-3xl"
+          >
+            Contactanos
+          </h2>
+        </div>
+        <form
+          class="tw-mt-4 tw-flex tw-max-w-[450px] tw-flex-col tw-place-content-center tw-gap-3 tw-p-2 max-md:tw-max-w-[350px]"
+        >
+          <div
+            class="tw-flex tw-w-[450px] tw-flex-col tw-gap-4 max-md:tw-w-[340px]"
+          >
+            <div class="tw-flex tw-flex-col tw-gap-1">
+              <div class="tw-text-gray-500">Nombre</div>
+              <input
+                type="text"
+                class="input"
+                maxlength="10"
+                required
+                placeholder="nombre"
+              />
+            </div>
+            <div class="tw-flex tw-flex-col tw-gap-1">
+              <div class="tw-text-gray-500">Asunto</div>
+              <input type="text" class="input" required placeholder="asunto" />
+            </div>
+            <div class="tw-flex tw-flex-col tw-gap-1">
+              <div class="tw-text-gray-500">Email</div>
+              <input
+                type="email"
+                class="input"
+                required
+                placeholder="email"
+                id="email"
+              />
+            </div>
+
+            <div class="tw-flex tw-w-full tw-flex-col tw-gap-2">
+              <div class="tw-text-gray-500">Mensaje</div>
+              <textarea
+                class="input tw-max-h-[250px] tw-min-h-[40px] tw-w-full tw-resize-y"
+                placeholder="mensaje"
+              ></textarea>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="btn tw-ml-auto tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
+          >
+            <span>Enviar</span>
+            <i class="bi bi-arrow-right"></i>
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+    <section class="carousel-section">
+        <h2 class="carousel-title">Nuestros clientes</h2>
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <a href="https://belfastcm.com/" target="_blank" rel="noreferrer">
+                    <img src="/assets/logo1.png" alt="Belfast Construction mangment">
+                </a>
+                <a href="https://www.avnordelta.com/" target="_blank" rel="noreferrer">
+                    <img src="/assets/logo2.png" alt="Asociasíon Vecinal Nordelta">
+                </a>
+                <a href="https://www.buildahomearg.com/" target="_blank" rel="noreferrer">
+                    <img src="/assets/logo3.png" alt="Build a home Arquitectura">
+                </a>
+                <a href="https://www.negrohouse.com.ar/" target="_blank" rel="noreferrer">
+                    <img src="/assets/logo4.png" alt="Negro House">
+                </a>
+                
+                <!-- Se duplican para que el bucle se vea continuo -->
+                <a href="https://belfastcm.com/" target="_blank" rel="noreferrer">
+                    <img src="/assets/logo1.png" alt="Belfast Construction mangment">
+                </a>
+                <a href="https://www.avnordelta.com/" target="_blank" rel="noreferrer">
+                    <img src="/assets/logo2.png" alt="Asociasíon Vecinal Nordelta">
+                </a>
+                <a href="https://www.buildahomearg.com/" target="_blank" rel="noreferrer">
+                    <img src="/assets/logo3.png" alt="Build a home Arquitectura">
+                </a>
+                <a href="https://www.negrohouse.com.ar/" target="_blank" rel="noreferrer">
+                    <img src="/assets/logo4.png" alt="Negro House">
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section
+      class="tw-mt-5 tw-flex tw-w-full tw-flex-col tw-place-items-center tw-p-[5%]"
+    >
+      <h3
+        class="primary-text-color tw-text-3xl tw-font-medium max-md:tw-text-2xl"
+      >
+      Testimonios de clientes
+      </h3>
+
+      <div
+        class="tw-mt-[5%] tw-flex tw-w-full tw-place-content-center tw-gap-[5%]"
+      >
+        <div class="review-container tw-flex tw-flex-col">
+          <div
+            class="tw-flex tw-h-[150px] tw-max-w-[550px] max-md:tw-h-[150px]"
+          >
+            <div class="slides fade tw-text-justify tw-text-lg">
+              <q class="tw-italic tw-text-gray-600">
+                Muy conformes con el trabajo. Les pedimos una reja decorativa para el frente de casa y quedó excelente, sólida y prolija. Se nota el cuidado en los detalles.
+              </q>
+              <div class="tw-mt-2 tw-text-yellow-400">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="tw-mt-3">— Mariela G., Buenos Aires</p>
+            </div>
+
+            <div class="slides fade tw-text-justify tw-text-lg">
+              <q class="tw-italic tw-text-gray-600">
+                Reformamos el patio y confiamos en Pistone para toda la estructura metálica. Cumplieron en tiempo y forma, con muy buen nivel de terminación.
+              </q>
+              <div class="tw-mt-2 tw-text-yellow-400">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="tw-mt-3">— Nicolás D., Zona Norte</p>
+            </div>
+
+            <div class="slides fade tw-text-justify tw-text-lg">
+              <q class="tw-italic tw-text-gray-600">
+                Encargamos una escalera interior de hierro y el resultado superó nuestras expectativas. Buen asesoramiento, diseño moderno y muy buena calidad.
+              </q>
+              <div class="tw-mt-2 tw-text-yellow-400">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <p class="tw-mt-3">— Valeria S., CABA</p>
+            </div>
+          </div>
+
+          <!-- Navigation dots -->
+          <div class="dots-container tw-mt-auto">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+      <div
+      id="location"
+        class="tw-mt-[5%] tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-5"
+      >
+        <h2 class="primary-text-color tw-text-3xl">Ubicacíon</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.4988531962294!2d-58.60679022462699!3d-34.4394826730136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca455b65fa305%3A0xad14e6cc4df9214f!2sParque%20Industrial%20Tigre!5e0!3m2!1ses!2sar!4v1744217313507!5m2!1ses!2sar"
+          class="tw-h-[350px] tw-w-[600px] max-md:tw-w-full"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <h2
+      class="primary-text-color tw-text-3xl tw-mt-3"
+      >Horarios</h2>
+      <div class="cotization-container tw-w-full tw-flex max-md:tw-flex-col tw-items-center tw-place-content-center max-md:tw-text-center tw-gap-[10%] tw-p-4">
+        <!-- Icono decorado -->
+        <div class="tw-flex tw-items-center tw-justify-center tw-place-content-center tw-w-1/2 max-md:tw-w-full">
+          <div class="tw-bg-[#000] tw-rounded-full tw-p-8 tw-flex tw-items-center">
+            <i class="bi bi-clock tw-text-white tw-justify-center tw-text-5xl max-md:tw-text-3xl "></i>
+          </div>
+        </div>
+  
+        <!-- Texto -->
+        <div class="tw-w-1/2 max-md:tw-w-full tw-px-4">
+          <p class="tw-text-gray-800 tw-text-2xl max-md:tw-text-xl tw-leading-relaxed tw-space-y-4 tw-text-center">
+            Lunes a Sabados <br>
+            8 a 17 hs <br>
+            Domingo cerrado
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--         <section
+            class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-[10%] tw-bg-[#EFEFEF] tw-p-[5%] tw-px-[10%]"
+        >
+            <div
+                class="tw-flex tw-w-full tw-flex-col tw-place-content-center tw-place-items-center tw-gap-3"
+            >
+                <h2 class="primary-text-color tw-text-3xl max-md:tw-text-xl">
+                    Special Newsletter signup
+                </h2>
+                <h2 class="tw-text-xl max-md:tw-text-lg">
+                    Be the first to know about upcoming properties
+                </h2>
+
+                <div
+                    class="input tw-flex tw-h-[50px] tw-place-items-center tw-overflow-hidden tw-bg-white tw-p-2"
+                >
+                    <input
+                        type="email"
+                        class="tw-h-full tw-w-full tw-bg-transparent tw-px-3 tw-outline-none"
+                        placeholder="email"
+                    />
+                    <button
+                        class="btn tw-h-[35px] tw-transition-colors tw-duration-[0.3s]"
+                    >
+                        Signup
+                    </button>
+                </div>
+            </div>
+        </section> -->
+
+        <div class="whatsapp-container">
+            <a
+                href="#"
+                class="floating-whatsapp whatsapp-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Contactarnos por WhatsApp"
+            >
+                <i class="bi bi-whatsapp"></i>
+                <span class="custom-tooltip">Chatea con nosotros</span>
+            </a>
+            </div>
+
+    <footer
+      class="tw-flex tw-w-full tw-place-content-around tw-gap-3 tw-bg-[#000] tw-p-[5%] tw-px-[10%] tw-text-white max-lg:tw-flex-col"
+    >
+      <div
+        class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+      >
+        <img
+          src="./assets/logo.png"
+          alt="logo"
+          srcset=""
+          class="tw-max-h-[100px] tw-max-w-[100px]"
+        />
+
+        <h2 class="tw-text-xl">Herreria Pistone</h2>
+        <div>
+            Parque Industrial Tigre,
+          <br />
+          Austria Norte N°1359
+          <br />
+          Buenos Aires
+          <br />
+          Argentina
+        </div>
+        <div class="tw-mt-3 tw-text-lg tw-font-semibold">Encontranos en</div>
+        <div class="tw-flex tw-gap-4 tw-text-2xl">
+          <a href="https://www.instagram.com/herreria_pistone/" class="footer-icon" aria-label="Instagram" target="_blank">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="mailto:herreriapistone@gmail.com" class="footer-icon" aria-label="Email" target="_blank">
+            <i class="bi bi-envelope-paper-fill"></i>
+          </a>
+          <a href="#" class="whatsapp-link footer-icon" aria-label="WhatsApp" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+        <h2 class="tw-text-3xl max-md:tw-text-xl">Enlaces útiles</h2>
+        <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+          <a href="https://www.instagram.com/p/DGGWhWvOgQE/?img_index=1" target="_blank" class="footer-link">Estructuras</a>
+          <a href="https://www.instagram.com/p/DFgqgNQvns7/?img_index=1" target="_blank" class="footer-link">Vinoteca</a>
+          <a href="https://www.instagram.com/p/DCXviPCPwFd/?img_index=1" target="_blank" class="footer-link">Barandales</a>
+          <a href="https://www.instagram.com/p/DED7TQUvo-2/?img_index=1" target="_blank" class="footer-link">Ventanales</a>
+        </div>
+      </div>
+
+      <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-4">
+        <h2 class="tw-text-3xl max-md:tw-text-xl">Navegación</h2>
+        <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+          <a href="#about-us" class="footer-link">Nosotros</a>
+          <a href="#projects" class="footer-link">Proyectos</a>
+          <a href="#booking" class="footer-link">Contacto</a>
+          <a href="#location" class="footer-link">Ubicacíon</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+    integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"
+    integrity="sha512-5efjkDjhldlK+BrHauVYJpbjKrtNemLZksZWxd6Wdxvm06dceqWGLLNjZywOkvW7BF032ktHRMUOarbK9d60bg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+
+  <script src="./scripts/utils.js"></script>
+  <script src="index.js"></script>
+</html>
