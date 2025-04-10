@@ -1,35 +1,44 @@
+# Herrería Pistone 🔨
 
->[!NOTE]
-This theme uses GSAP library, make sure to refer to their licensing.
+Sitio web institucional para **Herrería Pistone**, especializada en estructuras metálicas, remodelaciones y decoración interior y exterior.  
+Diseñado para mostrar trabajos, recibir consultas y facilitar el contacto directo con los clientes.
 
-Theme color: 
-1. #000
-2. #fff
+---
 
-**Github**: https://github.com/PaulleDemon/awesome-landing-pages
+## 🚀 Tecnologías utilizadas
 
-## Usage
+- HTML5
+- Tailwind CSS (`tw-` con prefijo personalizado)
+- JavaScript Vanilla
+- [Formspree](https://formspree.io) (para formularios de contacto)
 
-* This template uses tailwind css every tailwind class are prefixed with `tw-`, to help differentiate
-  between tailwind classes and other classes  
+---
 
-During development add the following to head tag
+## 📐 Basado en
 
-```html
-<link rel="stylesheet" href="tailwind-runtime.css"><!--replace with path to your tailwind runtime-->
-```
-During production use
+Este sitio fue desarrollado a partir de una plantilla del repositorio:
 
-```html
-<link rel="stylesheet" href="tailwind-build.css"><!--replace with path to your tailwind build-->
-```
+👉 [awesome-landing-pages](https://github.com/PaulleDemon/awesome-landing-pages)  
+por [PaulleDemon](https://github.com/PaulleDemon)
 
-To start Tailwind during development use
-```html
-npm run start:tailwind
-```
+Adaptado y personalizado para las necesidades de Herrería Pistone.
 
-To create a build file use
-```html
-npm run build:tailwind
-```
+---
+
+## ✉️ Formulario de contacto
+
+El formulario utiliza **Formspree** para enviar correos sin backend.  
+El endpoint se carga dinámicamente desde un atributo HTML para mantener el código limpio y fácil de configurar.
+
+---
+
+## 📁 Estructura del proyecto
+
+```bash
+📦 herreria-pistone/
+├── index.html
+├── style.css
+├── index.js
+├── config.js (si usás una constante externa para el endpoint)
+├── /assets (imágenes, íconos, etc.)
+└── README.md

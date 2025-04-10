@@ -473,53 +473,45 @@
           </h2>
         </div>
         <form
-          class="tw-mt-4 tw-flex tw-max-w-[450px] tw-flex-col tw-place-content-center tw-gap-3 tw-p-2 max-md:tw-max-w-[350px]"
-        >
-          <div
-            class="tw-flex tw-w-[450px] tw-flex-col tw-gap-4 max-md:tw-w-[340px]"
-          >
-            <div class="tw-flex tw-flex-col tw-gap-1">
-              <div class="tw-text-gray-500">Nombre</div>
-              <input
-                type="text"
-                class="input"
-                maxlength="10"
-                required
-                placeholder="nombre"
-              />
-            </div>
-            <div class="tw-flex tw-flex-col tw-gap-1">
-              <div class="tw-text-gray-500">Asunto</div>
-              <input type="text" class="input" required placeholder="asunto" />
-            </div>
-            <div class="tw-flex tw-flex-col tw-gap-1">
-              <div class="tw-text-gray-500">Email</div>
-              <input
-                type="email"
-                class="input"
-                required
-                placeholder="email"
-                id="email"
-              />
-            </div>
-
-            <div class="tw-flex tw-w-full tw-flex-col tw-gap-2">
-              <div class="tw-text-gray-500">Mensaje</div>
-              <textarea
-                class="input tw-max-h-[250px] tw-min-h-[40px] tw-w-full tw-resize-y"
-                placeholder="mensaje"
-              ></textarea>
-            </div>
+        id="contact-form"
+        method="POST"
+        data-endpoint="https://formspree.io/f/mrbproae"
+        class="tw-mt-4 tw-flex tw-max-w-[450px] tw-flex-col tw-place-content-center tw-gap-3 tw-p-2 max-md:tw-max-w-[350px]"
+      >
+        <div class="tw-flex tw-w-[450px] tw-flex-col tw-gap-4 max-md:tw-w-[340px]">
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <label class="tw-text-gray-500">Nombre</label>
+            <input type="text" name="nombre" class="input" required placeholder="nombre" />
           </div>
-
-          <button
-            type="submit"
-            class="btn tw-ml-auto tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
-          >
-            <span>Enviar</span>
-            <i class="bi bi-arrow-right"></i>
-          </button>
-        </form>
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <label class="tw-text-gray-500">Asunto</label>
+            <input type="text" name="asunto" class="input" required placeholder="asunto" />
+          </div>
+          <div class="tw-flex tw-flex-col tw-gap-1">
+            <label class="tw-text-gray-500">Email</label>
+            <input type="email" name="email" class="input" required placeholder="email" />
+          </div>
+          <div class="tw-flex tw-w-full tw-flex-col tw-gap-2">
+            <label class="tw-text-gray-500">Mensaje</label>
+            <textarea name="mensaje" class="input tw-max-h-[250px] tw-min-h-[40px] tw-w-full tw-resize-y" placeholder="mensaje"></textarea>
+          </div>
+        </div>
+      
+        <!-- Puedes agregar esta línea para evitar spam -->
+        <input type="hidden" name="_captcha" value="false" />
+      
+        <!-- Mensaje de éxito -->
+        <div id="mensaje-ok" class="tw-hidden tw-text-green-600">¡Mensaje enviado correctamente!</div>
+      
+        <button
+          type="submit"
+          class="btn tw-ml-auto tw-mt-5 tw-transition-transform tw-duration-[0.3s] hover:tw-translate-x-2"
+        >
+          <span>Enviar</span>
+          <i class="bi bi-arrow-right"></i>
+        </button>
+      </form>
+      
 
       </div>
     </section>

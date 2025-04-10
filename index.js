@@ -162,3 +162,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // email form
+
+const form = document.getElementById("contact-form");
+const endpoint = form.dataset.endpoint;
+
+form.setAttribute("action", endpoint);
+const formInputs = form.querySelectorAll("input, textarea");
+const formButton = form.querySelector("button[type='submit']");
+
+window.onload = () => {
+    form.reset();
+}
