@@ -114,15 +114,15 @@ q::before {
 
 q::after {
     content: "”"; /* Close quote */
-    color: #192650; 
-    font-size: xx-large; 
+    color: #192650;
+    font-size: xx-large;
     font-family: Revalia;
 }
 
 
 .overlay-gradient{
     background: #000;
-    background: linear-gradient(83deg, #0b0b0ba2 10%, rgba(0, 0, 0, 0.572) 54%, rgba(211,174,56,0) 75%, #263a4aa2 97%);
+    background: linear-gradient(83deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .primary-text-color{
