@@ -173,3 +173,15 @@ const formButton = form.querySelector("button[type='submit']");
 window.onload = () => {
     form.reset();
 }
+
+// scroll a event
+
+function scrollConOffset(e, id) {
+    e.preventDefault();
+    const yOffset = -60; // altura del navbar
+    const element = document.getElementById(id);
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+  
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  }
+  
