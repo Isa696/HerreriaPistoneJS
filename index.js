@@ -178,8 +178,19 @@ window.onload = () => {
 
 function scrollConOffset(e, id) {
     e.preventDefault();
-    const yOffset = -60; // altura del navbar
+  
+    // Definimos el offset según el id
+    let yOffset = -60; // valor por defecto
+  
+    if (id === 'about-us') {
+      yOffset = -100;
+    } else if (id === 'location') {
+      yOffset = -80;
+    }
+  
     const element = document.getElementById(id);
+    if (!element) return; // por si el ID no existe
+  
     const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
   
     window.scrollTo({ top: y, behavior: 'smooth' });

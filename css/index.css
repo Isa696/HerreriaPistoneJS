@@ -397,8 +397,8 @@ q::after {
 
 .carousel-track {
     display: flex;
-    width: calc(200%);
-    animation: scroll 30s linear infinite;
+    width: max-content;
+    animation: scroll 20s linear infinite;
 }
 
 .carousel-track a {
@@ -420,7 +420,7 @@ margin: auto 2rem;
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-33.333333333333336%);
     }
 }
 
